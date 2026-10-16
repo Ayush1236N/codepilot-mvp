@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/components/DiffViewer.tsx","./src/components/LogViewer.tsx","./src/components/StatusBadge.tsx","./src/lib/api.ts","./src/lib/session.ts","./src/pages/ConnectPage.tsx","./src/pages/NewTaskPage.tsx","./src/pages/TaskDetailPage.tsx","./src/pages/TasksListPage.tsx"],"version":"5.9.3"}

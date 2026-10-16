@@ -1,0 +1,4 @@
+export default function DiffViewer({ diff }: { diff: string | null }) {
+  if (!diff) return <div className="code-panel"><div className="code-body text-sm text-slate-600">No patch generated yet.</div></div>;
+  return <div className="code-panel"><div className="code-panel-bar"><i/><i/><i/></div><div className="code-body font-mono text-[11px]">{diff.split("\n").map((line, i) => { let cls = "text-slate-400"; if (line.startsWith("+++") || line.startsWith("---")) cls = "text-slate-600"; else if (line.startsWith("+")) cls = "text-emerald-300 bg-emerald-950/40"; else if (line.startsWith("-")) cls = "text-red-300 bg-red-950/40"; else if (line.startsWith("@@")) cls = "text-sky-300"; else if (line.startsWith("diff --git")) cls = "text-indigo-300 font-semibold"; return <div key={i} className={`whitespace-pre min-h-[17px] ${cls}`}>{line || " "}</div>; })}</div></div>;
+}
